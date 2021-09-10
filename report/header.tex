@@ -1,0 +1,47 @@
+\usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm,amssymb,amsfonts,amsmath}
+\usepackage{bm}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage{natbib}
+\usepackage{xcolor}
+
+\addto\captionsportuguese{
+      \renewcommand{\contentsname}%
+        {Sumário}%
+  }
+  
+\newlength{\drop}
+
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage[all]{background}
+
+\backgroundsetup{
+placement=center,
+scale=1.5,
+color=black,
+opacity=0.075,
+angle=0,
+contents={
+  \includegraphics[width=0.65\linewidth]{logo-ufba}
+  }
+}
+
+\DeclareMathOperator{\vari}{Var}
+\DeclareMathOperator{\espe}{E}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+% silence everypage latex package used by background package
+\usepackage{silence}
+\WarningsOff[everypage]% Suppress warnings related to package everypage
