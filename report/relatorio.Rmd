@@ -108,7 +108,7 @@ Nesta seção, vou incluir os resultados preliminares obtidos.
 
 ## Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (primeira versão)
 
-Na Figura \@ref(fig:grafico2V1), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por @hernandez2002contributions que é $0,98$.
+Na Figura \@ref(fig:grafico2V1), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por @hernandez2002contributions que é $0,98$. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$.
 
 ```{r grafico2V1, fig.cap="Gráfico de distribuição das características dos juízes.", out.width="90%"}
 knitr::include_graphics("../figures/grafico2_0_8.png")
@@ -118,7 +118,7 @@ knitr::include_graphics("../figures/grafico2_0_8.png")
 
 ## Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (segunda versão)
 
-Na Figura \@ref(fig:grafico2V2), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência $0,6$. Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é $1-\frac{1}{52}\approx 0,98$ para esta amostra de juízes.
+Na Figura \@ref(fig:grafico2V2), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência $0,6$. Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é $1-\frac{1}{52}\approx 0,98$ para esta amostra de juízes. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$.
 
 ```{r grafico2V2, fig.cap="Gráfico de distribuição das características dos juízes.", out.width="90%"}
 knitr::include_graphics("../figures/grafico2_80_perc.png")

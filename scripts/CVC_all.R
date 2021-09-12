@@ -4,7 +4,7 @@ library(vcd)
 library(irr)
 library(readxl)
 library(readr)
-# library(statBasics)
+library(writexl)
 library(tidyverse)
 
 
@@ -18,7 +18,9 @@ df_cvc_relevancia <- df_cvc_relevancia %>% dplyr::select(-Mx, -Vmax, -Pe)
 df_cvc <- dplyr::inner_join(df_cvc_clareza, df_cvc_relevancia, by = "Item") %>% 
   dplyr::arrange(`CVC -- clareza e compreensão`, `CVC -- relevância`)
 
-openxlsx::write.xlsx(df_cvc, file = "output/calculoCVC_total.xlsx", row.names = F)
+limite <- (1 - 1 / nrow(df_cvc_clareza)) * 0.75
+
+writexl::write_xlsx(df_cvc, path = "output/calculoCVC_total.xlsx")
 
 legenda_fill <- c(
   "CVC -- clareza e compreensão" = "Clareza e compreensão",
@@ -38,7 +40,7 @@ df_cvc <- df_cvc %>%
 # Gráfico CVC -- primeira versão (benchmark: 80% de 0,75)
 
 df_hline <- tibble::tibble(x = seq(from = 0, 23, by = 0.01)) %>% 
-  dplyr::mutate(y = rep(1 - 1 / 52, length(x)))
+  dplyr::mutate(y = rep(limite, length(x)))
 
 ggplot2::ggplot(df_cvc, ggplot2::aes(x = ItemNum)) +
   ggplot2::geom_bar(ggplot2::aes(y = CVC, fill = `Divisão`, color = `Divisão`),
@@ -73,7 +75,7 @@ ggplot2::ggsave('figures/grafico2_80_perc.eps')
 # Gráfico CVC -- primeira versão (benchmark: 0,8)
 
 df_hline <- tibble::tibble(x = seq(from = 0, 23, by = 0.01)) %>% 
-  dplyr::mutate(y = rep(1 -  1 / 52, length(x)))
+  dplyr::mutate(y = rep(limite, length(x)))
 
 ggplot2::ggplot(df_cvc, ggplot2::aes(x = ItemNum)) +
   ggplot2::geom_bar(ggplot2::aes(y = CVC, fill = `Divisão`, color = `Divisão`),

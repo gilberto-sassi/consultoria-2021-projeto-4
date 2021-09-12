@@ -4,7 +4,7 @@ library(vcd)
 library(irr)
 library(readxl)
 library(readr)
-# library(statBasics)
+library(writexl)
 library(tidyverse)
 
 # Reading the data
@@ -30,5 +30,5 @@ df_summary_clareza <- df %>%
             `CVC -- clareza e compreensão` = Mx / Vmax - Pe) %>% 
   dplyr::arrange(`CVC -- clareza e compreensão`)
 
-openxlsx::write.xlsx(df_summary_clareza, file = "output/calculoCVC_clareza.xlsx", row.names = F)
+writexl::write_xlsx(df_summary_clareza, path = "output/calculoCVC_clareza.xlsx")
 

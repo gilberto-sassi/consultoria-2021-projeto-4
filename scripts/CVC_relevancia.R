@@ -4,7 +4,7 @@ library(vcd)
 library(irr)
 library(readxl)
 library(readr)
-# library(statBasics)
+library(writexl)
 library(tidyverse)
 
 # Reading data
@@ -18,7 +18,7 @@ f_rename <- function(vetor) {
 df <- dados %>% # recoding
   dplyr::rename_with(f_rename) %>%
   tidyr::pivot_longer(cols = tidyselect::everything(), names_to = "Item", values_to = "Avaliação") %>%
-  dplyr::mutate(`Avaliação` = stringr::str_replace(`Avaliação`, "\\s+$", "")) %>% # remove trailing spaces
+  dplyr::mutate(`Avaliação` = stringr::str_replace(`Avaliação`, "\\s+$", "")) %>%
   dplyr::mutate(`Recodificação` = dplyr::recode(`Avaliação`,
                                     "nada relevante" = 1,
                                     "pouco relevante" = 2,
@@ -31,4 +31,4 @@ df_summary_relevancia <- df %>%
             `CVC -- relevância` = Mx / Vmax - Pe) %>%
   dplyr::arrange(`CVC -- relevância`)
 
-openxlsx::write.xlsx(df_summary_relevancia, file = "output/calculoCVC_relevancia.xlsx", row.names = F)
+writexl::write_xlsx(df_summary_relevancia, path = "output/calculoCVC_relevancia.xlsx")
