@@ -172,16 +172,7 @@ Este relatório apresenta os resultados da análise estatística do conjunto de 
 \hypertarget{materiais-e-muxe9todos}{%
 \section{Materiais e métodos}\label{materiais-e-muxe9todos}}
 
-O consulente pediu apoio no sexto passo do polo teórico na validação de conteúdo da escala de \emph{conhecimento, atitude e prática } do modelo psicométrico proposto por Pasquali (\protect\hyperlink{ref-pasquali1999elaboraccao}{1999}). Nesta consultoria, construimos três gráficos:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens;
-\item
-  Gráfico de distribuição de concordância entre os juízes usando o coeficiente de Kappa (Fleiss et al. \protect\hyperlink{ref-fleiss1981measurement}{1981});
-\end{enumerate}
+O consulente pediu apoio no sexto passo do polo teórico na validação de conteúdo da escala de \emph{conhecimento, atitude e prática } do modelo psicométrico proposto por Pasquali (\protect\hyperlink{ref-pasquali1999elaboraccao}{1999}). Nesta consultoria, construimos o Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens.
 
 Todas as computações e gráficos foram construídas usando a linguagem \texttt{R} (R Core Team \protect\hyperlink{ref-Rlang}{2021}).
 
@@ -247,7 +238,7 @@ Nesta seção, vou incluir os resultados preliminares obtidos.
 \hypertarget{gruxe1fico-do-coeficiente-de-validade-de-conteuxfado-em-relauxe7uxe3o-uxe0-clarezacompreensuxe3o-e-relevuxe2ncia-dos-itens-primeira-versuxe3o}{%
 \subsection{Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (primeira versão)}\label{gruxe1fico-do-coeficiente-de-validade-de-conteuxfado-em-relauxe7uxe3o-uxe0-clarezacompreensuxe3o-e-relevuxe2ncia-dos-itens-primeira-versuxe3o}}
 
-Na Figura \ref{fig:grafico2V1}, incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por Hernández-Nieto (\protect\hyperlink{ref-hernandez2002contributions}{2002}) que é \(0,98\). Esse valor é alto, e por isso sugiro usar \(75\%\) de \(\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74\).
+Na Figura \ref{fig:grafico2V1}, incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por Hernández-Nieto (\protect\hyperlink{ref-hernandez2002contributions}{2002}) que é \(0,98\). Esse valor é alto, e por isso sugiro usar \(75\%\) de \(\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74\), ou seja, no gráfico da Figura \ref{fig:grafico2V1} usamos o valor de referência \(0,74\) no lugar do valor de referência \(0,98\).
 
 \begin{figure}[htbp]
 
@@ -263,7 +254,7 @@ Na Figura \ref{fig:grafico2V1}, incluimos o gráfico com o coeficiente CVC de cl
 \hypertarget{gruxe1fico-do-coeficiente-de-validade-de-conteuxfado-em-relauxe7uxe3o-uxe0-clarezacompreensuxe3o-e-relevuxe2ncia-dos-itens-segunda-versuxe3o}{%
 \subsection{Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (segunda versão)}\label{gruxe1fico-do-coeficiente-de-validade-de-conteuxfado-em-relauxe7uxe3o-uxe0-clarezacompreensuxe3o-e-relevuxe2ncia-dos-itens-segunda-versuxe3o}}
 
-Na Figura \ref{fig:grafico2V2}, incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência \(0,6\). Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é \(1-\frac{1}{52}\approx 0,98\) para esta amostra de juízes. Esse valor é alto, e por isso sugiro usar \(75\%\) de \(\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74\).
+Na Figura \ref{fig:grafico2V2}, incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência \(0,6\). Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é \(1-\frac{1}{52}\approx 0,98\) para esta amostra de juízes. Esse valor é alto, e por isso sugiro usar \(75\%\) de \(\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74\), ou seja, no gráfico da Figura \ref{fig:grafico2V1} usamos o valor de referência \(0,74\) no lugar do valor de referência \(0,98\).
 
 \begin{figure}[htbp]
 
@@ -284,9 +275,6 @@ Na Figura \ref{fig:grafico2V2}, incluimos o gráfico com o coeficiente CVC de cl
 \begin{cslreferences}
 \leavevmode\hypertarget{ref-firmiano2017escala}{}%
 Firmiano, Maria Luisa Veras. 2017. ``Escala de Avaliação Do Conhecimento, Atitude E Prática de Gestantes Sobre Incontinência Urinária: Construção E Validação de Conteúdo.'' Master's thesis, Universidade Federal do Ceará.
-
-\leavevmode\hypertarget{ref-fleiss1981measurement}{}%
-Fleiss, Joseph L, Bruce Levin, Myunghee Cho Paik, and others. 1981. ``The Measurement of Interrater Agreement.'' \emph{Statistical Methods for Rates and Proportions} 2 (212-236): 22--23.
 
 \leavevmode\hypertarget{ref-hernandez2002contributions}{}%
 Hernández-Nieto, Rafael A. 2002. ``Contributions to Statistical Analysis.'' \emph{Mérida: Universidad de Los Andes} 193.

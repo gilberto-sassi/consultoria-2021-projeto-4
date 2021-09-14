@@ -17,7 +17,8 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache = TRUE, fig.align = "center", out.width = "75%", fig.pos = "htbp", warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE, fig.align = "center",
+                    out.width = "75%", fig.pos = "htbp", warning = FALSE)
 library(openxlsx)
 library(psych)
 library(readxl)
@@ -64,11 +65,7 @@ Este relatório apresenta os resultados da análise estatística do conjunto de 
 
 # Materiais e métodos
 
-O consulente pediu apoio no sexto passo do polo teórico na validação de conteúdo da escala de _conhecimento, atitude e prática _ do modelo psicométrico proposto por @pasquali1999elaboraccao. Nesta consultoria, construimos três gráficos:
-
-1. Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens;
-1. Gráfico de distribuição de concordância entre os juízes  usando o coeficiente de Kappa [@fleiss1981measurement];
-
+O consulente pediu apoio no sexto passo do polo teórico na validação de conteúdo da escala de _conhecimento, atitude e prática _ do modelo psicométrico proposto por @pasquali1999elaboraccao. Nesta consultoria, construimos o Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens.
 
 Todas as computações e gráficos foram construídas usando a linguagem `R` [@Rlang].
 
@@ -108,7 +105,7 @@ Nesta seção, vou incluir os resultados preliminares obtidos.
 
 ## Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (primeira versão)
 
-Na Figura \@ref(fig:grafico2V1), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por @hernandez2002contributions que é $0,98$. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$.
+Na Figura \@ref(fig:grafico2V1), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência recomendando por @hernandez2002contributions que é $0,98$. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$, ou seja, no gráfico da Figura \@ref(fig:grafico2V1) usamos o valor de referência $0,74$ no lugar do valor de referência $0,98$.
 
 ```{r grafico2V1, fig.cap="Gráfico de distribuição das características dos juízes.", out.width="90%"}
 knitr::include_graphics("../figures/grafico2_0_8.png")
@@ -118,7 +115,7 @@ knitr::include_graphics("../figures/grafico2_0_8.png")
 
 ## Gráfico do Coeficiente de Validade de Conteúdo em relação à clareza/compreensão e relevância dos itens (segunda versão)
 
-Na Figura \@ref(fig:grafico2V2), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência $0,6$. Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é $1-\frac{1}{52}\approx 0,98$ para esta amostra de juízes. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$.
+Na Figura \@ref(fig:grafico2V2), incluimos o gráfico com o coeficiente CVC de clareza/compreensão e com o coeficiente de CVC de relevância para cada item. Além disso, incluímos o valor de referência $0,6$. Como a amostra tem 52 juízes, o valor máximo do coeficiente CVC é $1-\frac{1}{52}\approx 0,98$ para esta amostra de juízes. Esse valor é alto, e por isso sugiro usar $75\%$ de $\left(1 - \frac{1}{52}\right) \cdot 0,75 = 0,74$, ou seja, no gráfico da Figura \@ref(fig:grafico2V2) usamos o valor de referência $0,74$ no lugar do valor de referência $0,98$.
 
 ```{r grafico2V2, fig.cap="Gráfico de distribuição das características dos juízes.", out.width="90%"}
 knitr::include_graphics("../figures/grafico2_80_perc.png")
